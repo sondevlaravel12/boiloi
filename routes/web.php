@@ -22,6 +22,7 @@ use App\Http\Controllers\PolicyController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\CartController as UserCartController;
 use App\Http\Controllers\User\WishlistController;
+use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -174,6 +175,7 @@ Route::get('lien-he/', [ContactController::class,'index'])->name('contact');
 Route::post('lien-he/gui-tin-nhan', [ContactController::class,'sentMessage'])->name('contact.sentmessage');
 Route::get('chinh-sach-doi-tra/', [PolicyController::class,'showReturnPolicy'])->name('returnPolicy');
 Route::get('chinh-sach-mua-hang/', [PolicyController::class,'showPurchasingPolicy'])->name('purchasingPolicy');
+Route::get('video-cua-toi/', [VideoController::class,'index'])->name('myvideo.index');
 
 // payment information
 Route::get('thong-tin-chuyen-khoan', [FrontendIndexController::class,'showBankInfor'])->name('bankinfor.show');
